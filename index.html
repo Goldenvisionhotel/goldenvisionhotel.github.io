@@ -178,7 +178,7 @@ h1,h2,h3{line-height:1.35;font-weight:700}
 </nav>
 
 <header class="hero" id="home">
-  <img class="hero-img" src="images/hero-facade.jpg" alt="Golden Vision Hotel facade — واجهة فندق الرؤية الذهبية" fetchpriority="high">
+  <img class="hero-img" src="hero-facade.jpg" alt="Golden Vision Hotel facade — واجهة فندق الرؤية الذهبية" fetchpriority="high">
   <div class="hero-in">
     <div class="hero-frame">
       <div class="crest-lg" aria-hidden="true">GV</div>
@@ -228,7 +228,7 @@ h1,h2,h3{line-height:1.35;font-weight:700}
     </div>
     <div class="access-grid">
       <div class="access-card">
-        <img src="images/access-bathroom.jpg" loading="lazy" alt="Accessible bathroom with grab bars and roll-in shower chair — حمام مهيأ بمقابض ثابتة وكرسي استحمام متحرك">
+        <img src="access-bathroom.jpg" loading="lazy" alt="Accessible bathroom with grab bars and roll-in shower chair — حمام مهيأ بمقابض ثابتة وكرسي استحمام متحرك">
         <div class="pad">
           <h3 data-ar="غرفة ذوي الإعاقة الحركية" data-en="Mobility-accessible room">غرفة ذوي الإعاقة الحركية</h3>
           <p data-ar="سريران منفصلان مع حمام مهيأ: مقابض ثابتة، كرسي استحمام متحرك، ومساحة حركة واسعة — 180 ريال شامل الضريبة."
@@ -236,7 +236,7 @@ h1,h2,h3{line-height:1.35;font-weight:700}
         </div>
       </div>
       <div class="access-card">
-        <img src="images/access-hearing-screen.jpg" loading="lazy" alt="Bedside screen with sign-language guidance and large-display clock — شاشة بلغة الإشارة وساعة بشاشة كبيرة">
+        <img src="access-hearing-screen.jpg" loading="lazy" alt="Bedside screen with sign-language guidance and large-display clock — شاشة بلغة الإشارة وساعة بشاشة كبيرة">
         <div class="pad">
           <h3 data-ar="غرفة ذوي الإعاقة السمعية" data-en="Hearing-accessible room">غرفة ذوي الإعاقة السمعية</h3>
           <p data-ar="سريران منفصلان مع شاشة إرشادات بلغة الإشارة، تنبيهات بصرية، هاتف مساعدة بزر طوارئ، ومستلزمات بملصقات برايل — 180 ريال شامل الضريبة."
@@ -270,7 +270,7 @@ h1,h2,h3{line-height:1.35;font-weight:700}
     </div>
     <div class="gal" id="galGrid"></div>
     <div class="heritage">
-      <img src="images/heritage-corner.jpg" loading="lazy" alt="Traditional Saudi antiques display in the lobby — ركن التراث السعودي في بهو الفندق">
+      <img src="heritage-corner.jpg" loading="lazy" alt="Traditional Saudi antiques display in the lobby — ركن التراث السعودي في بهو الفندق">
       <div class="pad">
         <h3 data-ar="ركن التراث" data-en="The heritage corner">ركن التراث</h3>
         <p data-ar="في بهو الفندق تجد مجموعة نادرة من المقتنيات التراثية السعودية — دلال القهوة النحاسية، أجهزة الراديو القديمة، السلال المنسوجة يدويًا، والموازين البرونزية. قطعة من تاريخ المنطقة الشرقية بانتظارك عند وصولك."
@@ -437,7 +437,7 @@ function renderRooms(){
       +'<div class="room-img">'
       +(r.feat?'<span class="feat-badge">'+(lang==='ar'?'الأكثر طلبًا':'Guest favourite')+'</span>':'')
       +(r.access?'<span class="feat-badge">'+(lang==='ar'?'مهيأة':'Accessible')+'</span>':'')
-      +'<img src="images/'+r.img+'" loading="lazy" alt="'+L.n+'">'
+      +'<img src="'+r.img+'" loading="lazy" alt="'+L.n+'">'
       +'<span class="price-badge">'+(lang==='ar'?('من '+r.price+' ر.س'):('From '+r.price+' SAR'))+' <small>/ '+(lang==='ar'?'ليلة':'night')+'</small></span>'
       +'</div><div class="room-body"><h3>'+L.n+'</h3>'
       +'<div class="amen">'+L.a.map(function(x){return '<span>'+x+'</span>';}).join('')+'</div>'
@@ -469,7 +469,7 @@ function renderNear(){
 function renderGallery(){
   document.getElementById('galGrid').innerHTML = GALLERY.map(function(g){
     var cap=lang==='ar'?g[1]:g[2];
-    return '<figure><img src="images/'+g[0]+'" loading="lazy" alt="'+cap+'"><figcaption>'+cap+'</figcaption></figure>';
+    return '<figure><img src="'+g[0]+'" loading="lazy" alt="'+cap+'"><figcaption>'+cap+'</figcaption></figure>';
   }).join('');
 }
 function applyLang(){
