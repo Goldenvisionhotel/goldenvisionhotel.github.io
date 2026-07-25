@@ -64,6 +64,10 @@ h1,h2,h3{line-height:1.35;font-weight:700}
 .btn-line:hover{background:rgba(201,162,39,.14)}
 .btn svg{width:18px;height:18px;flex-shrink:0}
 .hero-note{margin-top:18px;font-size:13px;color:#CDBF9A}
+.scroll-cue{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:2px;color:var(--gold);font-size:12.5px;font-weight:700;opacity:.95}
+.scroll-cue svg{width:22px;height:22px;animation:cueBounce 1.6s ease-in-out infinite}
+@keyframes cueBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+@media (max-width:760px){.hero{min-height:auto}.hero-in{padding:48px 16px 58px}.hero-frame{padding:30px 18px}}
 .rooms-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
 .room{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s}
 .room:hover{box-shadow:0 10px 28px rgba(26,26,26,.10);transform:translateY(-3px)}
@@ -201,6 +205,10 @@ h1,h2,h3{line-height:1.35;font-weight:700}
          data-en="Check-in 11:00 AM · Check-out 2:00 PM">تسجيل الدخول 11:00 صباحًا · تسجيل الخروج 2:00 ظهرًا</p>
     </div>
   </div>
+  <a class="scroll-cue" href="#rooms" aria-label="Scroll to rooms">
+    <span data-ar="اكتشف المزيد" data-en="Discover more">اكتشف المزيد</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+  </a>
 </header>
 
 <section class="section" id="rooms">
@@ -395,18 +403,33 @@ const ROOMS=[
  {img:"room-access-hearing.jpg",price:180,access:true,ar:{n:"غرفة مهيأة — إعاقة سمعية",d:"شاشة بلغة الإشارة، تنبيهات بصرية، وهاتف مساعدة بزر طوارئ.",a:["لغة الإشارة","تنبيهات بصرية","هاتف مساعدة"]},en:{n:"Accessible room — hearing",d:"Sign-language guidance screen, visual alerts, and a help phone with an emergency key.",a:["Sign language","Visual alerts","Help phone"]}}
 ];
 const NEAR=[
- {c:"shop",t:4,ar:{n:"وست أفنيو مول",c:"تسوق"},en:{n:"West Avenue Mall",c:"Shopping"},q:"West Avenue Mall Dammam"},
- {c:"shop",t:9,ar:{n:"وستفيلد الدمام",c:"تسوق"},en:{n:"Westfield Dammam",c:"Shopping"},q:"Westfield Dammam"},
- {c:"shop",t:9,ar:{n:"العثيم مول",c:"تسوق"},en:{n:"Al Othaim Mall",c:"Shopping"},q:"Al Othaim Mall Dammam"},
+ {c:"shop",t:2,w:1,ar:{n:"ممزي — مخبز ومقهى",c:"مقهى"},en:{n:"Mumsie — bakery and café",c:"Café"},q:"Mumsie Dammam"},
+ {c:"shop",t:6,ar:{n:"العثيم مول",c:"تسوق"},en:{n:"Al Othaim Mall",c:"Shopping"},q:"Al Othaim Mall Dammam"},
+ {c:"shop",t:12,ar:{n:"النخيل مول (وستفيلد الدمام)",c:"تسوق"},en:{n:"Westfield Dammam (Al Nakheel Mall)",c:"Shopping"},q:"Westfield Dammam"},
+ {c:"shop",t:13,ar:{n:"الظهران مول",c:"تسوق"},en:{n:"Dhahran Mall",c:"Shopping"},q:"Dhahran Mall"},
+ {c:"shop",t:15,ar:{n:"الراشد مول — الخبر",c:"تسوق"},en:{n:"Al Rashid Mall — Khobar",c:"Shopping"},q:"Al Rashid Mall Khobar"},
  {c:"sea",t:12,ar:{n:"كورنيش الدمام",c:"البحر"},en:{n:"Dammam Corniche",c:"Seafront"},q:"Dammam Corniche"},
- {c:"sea",t:14,ar:{n:"شاطئ الشاطئ",c:"البحر"},en:{n:"Ash Shati Beach",c:"Seafront"},q:"Ash Shati Corniche Beach Dammam"},
  {c:"sea",t:12,ar:{n:"دوار الأشرعة",c:"معلم"},en:{n:"Sails Roundabout",c:"Landmark"},q:"Sails Roundabout Dammam"},
- {c:"park",t:10,ar:{n:"منتزه الملك فهد",c:"حدائق"},en:{n:"King Fahad Park",c:"Parks"},q:"King Fahad Park Dammam"},
- {c:"park",t:10,ar:{n:"لايف بارك",c:"حدائق"},en:{n:"Life Park",c:"Parks"},q:"Life Park King Fahd Park Dammam"},
- {c:"cult",t:9,ar:{n:"متحف الفلوة والجوهرة",c:"ثقافة"},en:{n:"Alfelwah and Aljowharah Museum",c:"Culture"},q:"Alfelwah and Aljowharah Museum Dammam"},
- {c:"cult",t:17,ar:{n:"مركز إثراء الثقافي",c:"ثقافة"},en:{n:"Ithra — King Abdulaziz Center",c:"Culture"},q:"Ithra Dhahran"}
+ {c:"sea",t:13,ar:{n:"شاطئ الشاطئ",c:"البحر"},en:{n:"Ash Shati Beach",c:"Seafront"},q:"Ash Shati Corniche Beach Dammam"},
+ {c:"sea",t:16,ar:{n:"كورنيش الخبر",c:"البحر"},en:{n:"Khobar Corniche",c:"Seafront"},q:"Khobar Corniche"},
+ {c:"park",t:6,w:1,ar:{n:"سلسبيل بارك",c:"حدائق"},en:{n:"Salsabeel Park",c:"Parks"},q:"Salsabeel Park Dammam"},
+ {c:"park",t:3,ar:{n:"حديقة أرامكو البيئية 2",c:"حدائق"},en:{n:"Aramco Environmental Park 2",c:"Parks"},q:"Aramco Environmental Park 2 Dammam"},
+ {c:"park",t:5,ar:{n:"لايف بارك",c:"حدائق"},en:{n:"Life Park",c:"Parks"},q:"Life Park King Fahd Park Dammam"},
+ {c:"park",t:8,ar:{n:"منتزه الملك فهد",c:"حدائق"},en:{n:"King Fahad Park",c:"Parks"},q:"King Fahad Park Dammam"},
+ {c:"cult",t:3,ar:{n:"قاعة الدارة للمعارض والمؤتمرات",c:"فعاليات"},en:{n:"ADDARAH Exhibition & Conference Hall",c:"Events"},q:"ADDARAH Exhibition Conference Hall Dammam"},
+ {c:"cult",t:6,ar:{n:"متحف الفلوة والجوهرة",c:"ثقافة"},en:{n:"Alfelwah and Aljowharah Museum",c:"Culture"},q:"Alfelwah and Aljowharah Museum Dammam"},
+ {c:"cult",t:8,ar:{n:"مركز إثراء الثقافي",c:"ثقافة"},en:{n:"Ithra — King Abdulaziz Center",c:"Culture"},q:"Ithra Dhahran"},
+ {c:"med",t:7,ar:{n:"مستشفى الولادة والأطفال",c:"مستشفيات"},en:{n:"Maternity and Children Hospital",c:"Hospitals"},q:"Maternity and Children Hospital Dammam"},
+ {c:"med",t:7,ar:{n:"تجمع الشرقية الصحي",c:"مستشفيات"},en:{n:"Eastern Health Cluster",c:"Hospitals"},q:"Eastern Health Cluster Dammam"},
+ {c:"med",t:8,ar:{n:"مستشفى الملك فهد التخصصي بالدمام",c:"مستشفيات"},en:{n:"King Fahad Specialist Hospital",c:"Hospitals"},q:"King Fahad Specialist Hospital Dammam"},
+ {c:"med",t:9,ar:{n:"مستشفى الإمام عبدالرحمن الفيصل — الحرس الوطني",c:"مستشفيات"},en:{n:"Imam Abdulrahman Al Faisal Hospital — National Guard",c:"Hospitals"},q:"Imam Abdulrahman Al Faisal Hospital Dhahran"},
+ {c:"med",t:11,ar:{n:"جونز هوبكنز أرامكو الصحية — الظهران",c:"مستشفيات"},en:{n:"Johns Hopkins Aramco Healthcare — Dhahran",c:"Hospitals"},q:"Johns Hopkins Aramco Healthcare Dhahran"},
+ {c:"edu",t:3,ar:{n:"إدارة تعليم المنطقة الشرقية",c:"تعليم"},en:{n:"General Directorate for Education",c:"Education"},q:"General Directorate for Education Dammam"},
+ {c:"edu",t:4,ar:{n:"إنرجي تك — المعهد التقني للطاقة",c:"تعليم"},en:{n:"EnergyTech Institute",c:"Education"},q:"EnergyTech Dammam"},
+ {c:"edu",t:11,ar:{n:"جامعة الإمام عبدالرحمن بن فيصل",c:"تعليم"},en:{n:"Imam Abdulrahman Bin Faisal University",c:"Education"},q:"Imam Abdulrahman Bin Faisal University Dammam"},
+ {c:"edu",t:12,ar:{n:"جامعة الملك فهد للبترول والمعادن",c:"تعليم"},en:{n:"King Fahd University of Petroleum and Minerals",c:"Education"},q:"KFUPM Dhahran"}
 ];
-const CHIPS=[["all","الكل","All"],["shop","تسوق","Shopping"],["sea","البحر","Sea"],["park","حدائق","Parks"],["cult","ثقافة","Culture"]];
+const CHIPS=[["all","الكل","All"],["shop","تسوق ومقاهي","Shopping"],["sea","البحر","Sea"],["park","حدائق","Parks"],["cult","ثقافة وفعاليات","Culture"],["med","مستشفيات","Hospitals"],["edu","تعليم","Education"]];
 const GALLERY=[
  ["room-king-wide.jpg","غرفة كينج — مساحة واسعة","King room — generous space"],
  ["room-twin-evening.jpg","غرفة بسريرين — إضاءة مسائية","Twin room by evening"],
@@ -462,7 +485,7 @@ function renderNear(){
   document.getElementById('nearGrid').innerHTML = NEAR.filter(function(p){return activeChip==='all'||p.c===activeChip;}).map(function(p){
     var L=p[lang];
     return '<div class="near"><span class="cat">'+L.c+'</span><h3>'+L.n+'</h3>'
-      +'<span class="time">'+(lang==='ar'?('≈ '+p.t+' دقائق بالسيارة'):('≈ '+p.t+' min by car'))+'</span>'
+      +'<span class="time">'+(p.w?(lang==='ar'?('≈ '+p.t+' دقائق مشيًا'):('≈ '+p.t+' min walk')):(lang==='ar'?('≈ '+p.t+' دقائق بالسيارة'):('≈ '+p.t+' min by car')))+'</span>'
       +'<a href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p.q)+'" target="_blank" rel="noopener">'+(lang==='ar'?'الاتجاهات ←':'Directions →')+'</a></div>';
   }).join('');
 }
