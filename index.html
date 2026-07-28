@@ -59,7 +59,7 @@
   "hasMap": "https://maps.app.goo.gl/8va98KpJgwdjJUX29",
   "checkinTime": "11:00",
   "checkoutTime": "14:00",
-  "priceRange": "SAR 180-360",
+  "priceRange": "SAR 147-267",
   "currenciesAccepted": "SAR",
   "paymentAccepted": "mada, Visa, Mastercard, American Express, UnionPay, Tamara, Bank transfer",
   "petsAllowed": false,
@@ -150,7 +150,7 @@ h1,h2,h3{line-height:1.35;font-weight:700}
 .scroll-cue:hover{background:#D9B335}
 .scroll-cue svg{width:26px;height:26px;animation:cueBounce 1.4s ease-in-out infinite}
 @keyframes cueBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
-@media (max-width:760px){.hero{min-height:auto}.hero-in{padding:48px 16px 76px}.hero-frame{padding:30px 18px}.scroll-cue{font-size:15px;padding:9px 22px 7px}}
+@media (max-width:760px){.hero{min-height:auto;flex-direction:column}.hero-in{padding:44px 16px 18px}.hero-frame{padding:30px 18px}.scroll-cue{position:static;transform:none;margin:0 auto 30px;font-size:15px;padding:11px 24px 9px}}
 .rooms-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
 .room{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s}
 .room:hover{box-shadow:0 10px 28px rgba(26,26,26,.10);transform:translateY(-3px)}
@@ -159,6 +159,10 @@ h1,h2,h3{line-height:1.35;font-weight:700}
 .price-badge{position:absolute;bottom:10px;inset-inline-start:10px;background:rgba(26,26,26,.88);color:var(--gold);padding:6px 12px;border-radius:8px;font-weight:700;font-size:14.5px}
 .price-badge small{color:#E8E2D4;font-weight:400;font-size:11.5px}
 .feat-badge{position:absolute;top:10px;inset-inline-start:10px;background:var(--gold);color:#241B02;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:700}
+.disc-badge{position:absolute;top:10px;inset-inline-end:10px;background:#8A1F1F;color:#FFF3D6;padding:4px 10px;border-radius:999px;font-size:12.5px;font-weight:700;letter-spacing:.02em}
+.price-badge s{color:#B9B1A0;font-weight:400;font-size:12.5px;margin-inline-end:5px}
+.hero-offer{display:inline-block;margin-top:14px;background:#8A1F1F;color:#FFF3D6;border:1px solid rgba(201,162,39,.55);padding:8px 18px;border-radius:999px;font-size:14.5px;font-weight:700}
+.pill-offer{background:#8A1F1F;border-color:#8A1F1F;color:#FFF3D6}
 .room-body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
 .room h3{font-size:19px;color:var(--ink)}
 .room .amen{display:flex;flex-wrap:wrap;gap:8px}
@@ -284,6 +288,7 @@ h1,h2,h3{line-height:1.35;font-weight:700}
           <span data-ar="اتصال" data-en="Call">اتصال</span>
         </a>
       </div>
+      <div class="hero-offer" data-ar="عرض لفترة محدودة — خصم يصل إلى ٣٣٪ حتى ١٣ أغسطس ٢٠٢٦" data-en="Limited offer — up to 33% off until 13 August 2026">عرض لفترة محدودة — خصم يصل إلى ٣٣٪ حتى ١٣ أغسطس ٢٠٢٦</div>
       <p class="hero-note" data-ar="تسجيل الدخول 11:00 صباحًا · تسجيل الخروج 2:00 ظهرًا"
          data-en="Check-in 11:00 AM · Check-out 2:00 PM">تسجيل الدخول 11:00 صباحًا · تسجيل الخروج 2:00 ظهرًا</p>
     </div>
@@ -302,6 +307,7 @@ h1,h2,h3{line-height:1.35;font-weight:700}
       <div class="gold-rule"></div>
     </div>
     <div class="tax-strip">
+      <span class="pill pill-offer" data-ar="خصم يصل إلى ٣٣٪ — حتى ١٣ أغسطس ٢٠٢٦" data-en="Up to 33% off — until 13 August 2026">خصم يصل إلى ٣٣٪ — حتى ١٣ أغسطس ٢٠٢٦</span>
       <span class="pill" data-ar="جميع الأسعار شاملة الضريبة" data-en="All prices tax included">جميع الأسعار شاملة الضريبة</span>
       <span class="pill" data-ar="قسّط إقامتك مع تمارا" data-en="Split your stay with Tamara">قسّط إقامتك مع تمارا</span>
       <span class="pill" data-ar="مواقف مجانية لأكثر من 30 سيارة" data-en="Free parking for 30+ cars">مواقف مجانية لأكثر من 30 سيارة</span>
@@ -322,16 +328,16 @@ h1,h2,h3{line-height:1.35;font-weight:700}
         <img src="access-bathroom.jpg" loading="lazy" alt="Accessible bathroom with grab bars and roll-in shower chair — حمام مهيأ بمقابض ثابتة وكرسي استحمام متحرك">
         <div class="pad">
           <h3 data-ar="غرفة ذوي الإعاقة الحركية" data-en="Mobility-accessible room">غرفة ذوي الإعاقة الحركية</h3>
-          <p data-ar="سريران منفصلان مع حمام مهيأ: مقابض ثابتة، كرسي استحمام متحرك، ومساحة حركة واسعة — 180 ريال شامل الضريبة."
-             data-en="Twin beds with an adapted bathroom: grab bars, a mobile shower chair, and generous turning space — 180 SAR tax included.">سريران منفصلان مع حمام مهيأ: مقابض ثابتة، كرسي استحمام متحرك، ومساحة حركة واسعة — 180 ريال شامل الضريبة.</p>
+          <p data-ar="سريران منفصلان مع حمام مهيأ: مقابض ثابتة، كرسي استحمام متحرك، ومساحة حركة واسعة — 167 ريال شامل الضريبة."
+             data-en="Twin beds with an adapted bathroom: grab bars, a mobile shower chair, and generous turning space — 167 SAR tax included.">سريران منفصلان مع حمام مهيأ: مقابض ثابتة، كرسي استحمام متحرك، ومساحة حركة واسعة — 167 ريال شامل الضريبة.</p>
         </div>
       </div>
       <div class="access-card">
         <img src="access-hearing-screen.jpg" loading="lazy" alt="Bedside screen with sign-language guidance and large-display clock — شاشة بلغة الإشارة وساعة بشاشة كبيرة">
         <div class="pad">
           <h3 data-ar="غرفة ذوي الإعاقة السمعية" data-en="Hearing-accessible room">غرفة ذوي الإعاقة السمعية</h3>
-          <p data-ar="سريران منفصلان مع شاشة إرشادات بلغة الإشارة، تنبيهات بصرية، هاتف مساعدة بزر طوارئ، ومستلزمات بملصقات برايل — 180 ريال شامل الضريبة."
-             data-en="Twin beds with a sign-language guidance screen, visual alerts, a help phone with an emergency key, and Braille-labelled amenities — 180 SAR tax included.">سريران منفصلان مع شاشة إرشادات بلغة الإشارة، تنبيهات بصرية، هاتف مساعدة بزر طوارئ، ومستلزمات بملصقات برايل — 180 ريال شامل الضريبة.</p>
+          <p data-ar="سريران منفصلان مع شاشة إرشادات بلغة الإشارة، تنبيهات بصرية، هاتف مساعدة بزر طوارئ، ومستلزمات بملصقات برايل — 167 ريال شامل الضريبة."
+             data-en="Twin beds with a sign-language guidance screen, visual alerts, a help phone with an emergency key, and Braille-labelled amenities — 167 SAR tax included.">سريران منفصلان مع شاشة إرشادات بلغة الإشارة، تنبيهات بصرية، هاتف مساعدة بزر طوارئ، ومستلزمات بملصقات برايل — 167 ريال شامل الضريبة.</p>
         </div>
       </div>
     </div>
@@ -476,14 +482,14 @@ h1,h2,h3{line-height:1.35;font-weight:700}
 </div>
 <script>
 const ROOMS=[
- {img:"room-king.jpg",price:180,ar:{n:"غرفة بسرير كينج",d:"سرير كينج فاخر مع مساحة واسعة، مثالية للأفراد والأزواج.",a:["سرير كينج","تكييف","واي فاي","تلفزيون","ركن قهوة"]},en:{n:"King bed room",d:"A spacious room with a plush king bed — ideal for couples and solo travellers.",a:["King bed","AC","Wi-Fi","TV","Coffee corner"]}},
- {img:"room-twin.jpg",price:220,ar:{n:"غرفة بسريرين منفصلين",d:"سريران مفردان مع مساحة مريحة للأصدقاء أو الزملاء.",a:["سريران","تكييف","واي فاي","تلفزيون"]},en:{n:"Twin bed room",d:"Two single beds with generous space — great for friends or colleagues.",a:["Twin beds","AC","Wi-Fi","TV"]}},
- {img:"room-triple.jpg",price:250,ar:{n:"غرفة ثلاثية",d:"ثلاثة أسرّة في غرفة واحدة واسعة للعائلات الصغيرة والمجموعات.",a:["3 أسرّة","تكييف","واي فاي","تلفزيون"]},en:{n:"Triple room",d:"Three beds in one large room — made for small families and groups.",a:["3 beds","AC","Wi-Fi","TV"]}},
- {img:"room-king-living.jpg",price:280,feat:true,ar:{n:"غرفة كينج مع صالة",d:"سرير كينج مع صالة جلوس خاصة وطاولة طعام — راحة إضافية لإقامة أطول.",a:["سرير كينج","صالة جلوس","ثلاجة","واي فاي"]},en:{n:"King bed with living room",d:"A king bedroom plus a private lounge with sofas and a dining corner — extra comfort for longer stays.",a:["King bed","Living room","Mini-fridge","Wi-Fi"]}},
- {img:"room-family-unit.jpg",price:320,ar:{n:"جناح عائلي بغرفتين",d:"غرفتان منفصلتان: سرير كينج وسريران مفردان، مع حمّامَين — خصوصية كاملة للعائلة.",a:["غرفتان","حمّامان","كينج + سريران","واي فاي"]},en:{n:"Family unit — two rooms",d:"Two separate bedrooms — a king room and a twin room — with two bathrooms. Full privacy for the family.",a:["2 bedrooms","2 bathrooms","King + twins","Wi-Fi"]}},
- {img:"room-family-suite.jpg",price:360,ar:{n:"جناح عائلي مع صالة",d:"غرفتان وحمّامان مع صالة جلوس واسعة — الخيار الأكمل لإقامة عائلية.",a:["غرفتان","حمّامان","صالة جلوس","ركن طعام"]},en:{n:"Family suite with living room",d:"Two bedrooms and two bathrooms plus a full lounge — our most complete family option.",a:["2 bedrooms","2 bathrooms","Living room","Dining corner"]}},
- {img:"room-access-mobility.jpg",price:180,access:true,ar:{n:"غرفة مهيأة — إعاقة حركية",d:"سريران مع حمام مهيأ بمقابض وكرسي استحمام متحرك.",a:["مهيأة بالكامل","مقابض ثابتة","كرسي استحمام"]},en:{n:"Accessible room — mobility",d:"Twin beds with an adapted bathroom: grab bars and a mobile shower chair.",a:["Fully adapted","Grab bars","Shower chair"]}},
- {img:"room-access-hearing.jpg",price:180,access:true,ar:{n:"غرفة مهيأة — إعاقة سمعية",d:"شاشة بلغة الإشارة، تنبيهات بصرية، وهاتف مساعدة بزر طوارئ.",a:["لغة الإشارة","تنبيهات بصرية","هاتف مساعدة"]},en:{n:"Accessible room — hearing",d:"Sign-language guidance screen, visual alerts, and a help phone with an emergency key.",a:["Sign language","Visual alerts","Help phone"]}}
+ {img:"room-king.jpg",price:147,was:220,ar:{n:"غرفة بسرير كينج",d:"سرير كينج فاخر مع مساحة واسعة، مثالية للأفراد والأزواج.",a:["سرير كينج","تكييف","واي فاي","تلفزيون","ركن قهوة"]},en:{n:"King bed room",d:"A spacious room with a plush king bed — ideal for couples and solo travellers.",a:["King bed","AC","Wi-Fi","TV","Coffee corner"]}},
+ {img:"room-twin.jpg",price:167,was:250,ar:{n:"غرفة بسريرين منفصلين",d:"سريران مفردان مع مساحة مريحة للأصدقاء أو الزملاء.",a:["سريران","تكييف","واي فاي","تلفزيون"]},en:{n:"Twin bed room",d:"Two single beds with generous space — great for friends or colleagues.",a:["Twin beds","AC","Wi-Fi","TV"]}},
+ {img:"room-triple.jpg",price:180,was:270,ar:{n:"غرفة ثلاثية",d:"ثلاثة أسرّة في غرفة واحدة واسعة للعائلات الصغيرة والمجموعات.",a:["3 أسرّة","تكييف","واي فاي","تلفزيون"]},en:{n:"Triple room",d:"Three beds in one large room — made for small families and groups.",a:["3 beds","AC","Wi-Fi","TV"]}},
+ {img:"room-king-living.jpg",price:200,was:300,feat:true,ar:{n:"غرفة كينج مع صالة",d:"سرير كينج مع صالة جلوس خاصة وطاولة طعام — راحة إضافية لإقامة أطول.",a:["سرير كينج","صالة جلوس","ثلاجة","واي فاي"]},en:{n:"King bed with living room",d:"A king bedroom plus a private lounge with sofas and a dining corner — extra comfort for longer stays.",a:["King bed","Living room","Mini-fridge","Wi-Fi"]}},
+ {img:"room-family-unit.jpg",price:239,was:350,ar:{n:"جناح عائلي بغرفتين",d:"غرفتان منفصلتان: سرير كينج وسريران مفردان، مع حمّامَين — خصوصية كاملة للعائلة.",a:["غرفتان","حمّامان","كينج + سريران","واي فاي"]},en:{n:"Family unit — two rooms",d:"Two separate bedrooms — a king room and a twin room — with two bathrooms. Full privacy for the family.",a:["2 bedrooms","2 bathrooms","King + twins","Wi-Fi"]}},
+ {img:"room-family-suite.jpg",price:267,was:400,ar:{n:"جناح عائلي مع صالة",d:"غرفتان وحمّامان مع صالة جلوس واسعة — الخيار الأكمل لإقامة عائلية.",a:["غرفتان","حمّامان","صالة جلوس","ركن طعام"]},en:{n:"Family suite with living room",d:"Two bedrooms and two bathrooms plus a full lounge — our most complete family option.",a:["2 bedrooms","2 bathrooms","Living room","Dining corner"]}},
+ {img:"room-access-mobility.jpg",price:167,was:250,access:true,ar:{n:"غرفة مهيأة — إعاقة حركية",d:"سريران مع حمام مهيأ بمقابض وكرسي استحمام متحرك.",a:["مهيأة بالكامل","مقابض ثابتة","كرسي استحمام"]},en:{n:"Accessible room — mobility",d:"Twin beds with an adapted bathroom: grab bars and a mobile shower chair.",a:["Fully adapted","Grab bars","Shower chair"]}},
+ {img:"room-access-hearing.jpg",price:167,was:250,access:true,ar:{n:"غرفة مهيأة — إعاقة سمعية",d:"شاشة بلغة الإشارة، تنبيهات بصرية، وهاتف مساعدة بزر طوارئ.",a:["لغة الإشارة","تنبيهات بصرية","هاتف مساعدة"]},en:{n:"Accessible room — hearing",d:"Sign-language guidance screen, visual alerts, and a help phone with an emergency key.",a:["Sign language","Visual alerts","Help phone"]}}
 ];
 const NEAR=[
  {c:"shop",t:2,w:1,ar:{n:"ممزي — مخبز ومقهى",c:"مقهى"},en:{n:"Mumsie — bakery and café",c:"Café"},q:"Mumsie Dammam"},
@@ -543,8 +549,9 @@ function renderRooms(){
       +'<div class="room-img">'
       +(r.feat?'<span class="feat-badge">'+(lang==='ar'?'الأكثر طلبًا':'Guest favourite')+'</span>':'')
       +(r.access?'<span class="feat-badge">'+(lang==='ar'?'مهيأة':'Accessible')+'</span>':'')
+      +(r.was?'<span class="disc-badge">-'+Math.round((1-r.price/r.was)*100)+'%</span>':'')
       +'<img src="'+r.img+'" loading="lazy" alt="'+L.n+'">'
-      +'<span class="price-badge">'+(lang==='ar'?('من '+r.price+' ر.س'):('From '+r.price+' SAR'))+' <small>/ '+(lang==='ar'?'ليلة':'night')+'</small></span>'
+      +'<span class="price-badge">'+(r.was?'<s>'+r.was+'</s> ':'')+r.price+(lang==='ar'?' ر.س':' SAR')+' <small>/ '+(lang==='ar'?'ليلة':'night')+'</small></span>'
       +'</div><div class="room-body"><h3>'+L.n+'</h3>'
       +'<div class="amen">'+L.a.map(function(x){return '<span>'+x+'</span>';}).join('')+'</div>'
       +'<p class="desc">'+L.d+'</p>'
