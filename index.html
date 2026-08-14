@@ -547,13 +547,13 @@ function bindBook(){
 }
 function waRoomMsg(r,L){
   if(lang==='ar'){
-    return 'مرحبًا 👋\nأتواصل معكم عبر الموقع الإلكتروني goldenvisionhotel.com\n'
+    return 'مرحبًا '+'\uD83D\uDC4B\uD83C\uDFFB'+'\nأتواصل معكم عبر الموقع الإلكتروني goldenvisionhotel.com\n'
       +'أرغب بالحجز: '+L.n+'\n'
       +'سعر العرض: '+r.price+' ريال لليلة — شامل الضريبة والرسوم'
       +(r.was?' (بدلاً من '+r.was+' ريال)':'')
       +'\nالرجاء تأكيد التوفر. شكرًا لكم';
   }
-  return 'Hello 👋\nI am contacting you from your website goldenvisionhotel.com\n'
+  return 'Hello '+'\uD83D\uDC4B\uD83C\uDFFB'+'\nI am contacting you from your website goldenvisionhotel.com\n'
     +'I would like to book: '+L.n+'\n'
     +'Offer price: '+r.price+' SAR per night — tax and fees included'
     +(r.was?' (was '+r.was+' SAR)':'')
@@ -561,8 +561,8 @@ function waRoomMsg(r,L){
 }
 function waGenericMsg(){
   return lang==='ar'
-    ? 'مرحبًا 👋\nأتواصل معكم عبر الموقع الإلكتروني goldenvisionhotel.com\nأرغب بالاستفسار عن الحجز وعرض الخصم الحالي. شكرًا لكم'
-    : 'Hello 👋\nI am contacting you from your website goldenvisionhotel.com\nI would like to ask about booking and the current offer. Thank you';
+    ? 'مرحبًا '+'\uD83D\uDC4B\uD83C\uDFFB'+'\nأتواصل معكم عبر الموقع الإلكتروني goldenvisionhotel.com\nأرغب بالاستفسار عن الحجز وعرض الخصم الحالي. شكرًا لكم'
+    : 'Hello '+'\uD83D\uDC4B\uD83C\uDFFB'+'\nI am contacting you from your website goldenvisionhotel.com\nI would like to ask about booking and the current offer. Thank you';
 }
 function updateGenericWa(){
   var u='https://wa.me/966535099958?text='+encodeURIComponent(waGenericMsg());
