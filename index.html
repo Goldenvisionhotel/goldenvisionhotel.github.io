@@ -48,7 +48,7 @@
     "https://goldenvisionhotel.com/room-king.jpg"
   ],
   "logo": "https://goldenvisionhotel.com/hero-facade.jpg",
-  "description": "Arrawiya Alzahabia Hotel (formerly Golden Vision Hotel) — فندق الرؤية الذهبية في حي الفردوس بالدمام: غرف وأجنحة عائلية بأسعار شاملة الضريبة، غرف مهيأة لذوي الإعاقة الحركية والسمعية، ومواقف مجانية.",
+  "description": "Arrawiya Alzahabia Hotel (formerly Golden Vision Hotel) — فندق نجمة واحدة مصنّف من وزارة السياحة في حي الفردوس بالدمام: غرف وأجنحة عائلية بأسعار شاملة الضريبة، غرف مهيأة لذوي الإعاقة الحركية والسمعية، ومواقف مجانية.",
   "email": "goldenvisionhotel@outlook.sa",
   "telephone": "+966-13-891-0999",
   "address": {
@@ -225,7 +225,16 @@
       "priceValidUntil": "2026-12-31",
       "url": "https://goldenvisionhotel.com/#rooms"
     }
-  ]
+  ],
+  "starRating": {
+    "@type": "Rating",
+    "ratingValue": "1",
+    "bestRating": "5",
+    "author": {
+      "@type": "GovernmentOrganization",
+      "name": "Saudi Ministry of Tourism — وزارة السياحة"
+    }
+  }
 }
 </script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%231A1A1A'/><text x='50' y='66' font-size='46' text-anchor='middle' fill='%23C9A227' font-family='Georgia'>GV</text></svg>">
@@ -278,6 +287,9 @@ h1,h2,h3{line-height:1.35;font-weight:700}
 .hero .crest-lg{width:64px;height:64px;margin:0 auto 18px;border:2px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-family:'Marcellus',serif;font-size:24px}
 .hero h1{font-size:clamp(30px,5.5vw,52px);color:#fff}
 .hero .alt-name{font-size:clamp(16px,2.6vw,22px);color:var(--gold);margin-top:6px;font-family:'Marcellus',serif;letter-spacing:.08em}
+.stars{display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:5px 14px;border:1px solid rgba(201,162,39,.55);border-radius:999px;background:rgba(20,18,14,.45);font-size:13px;color:#E8DFC6;letter-spacing:.02em}
+.stars .st{color:var(--gold);font-size:16px;line-height:1}
+.fstars{color:var(--gold);font-size:13.5px;margin-top:8px}
 .former{margin-top:6px;font-size:13px;color:#C9BFA4;letter-spacing:.03em;font-style:italic}
 .hero p.tag{margin-top:14px;color:#E8E2D4;font-size:clamp(15px,2vw,18px)}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:26px}
@@ -413,6 +425,14 @@ h1,h2,h3{line-height:1.35;font-weight:700}
     },
     {
       "@type": "Question",
+      "name": "كم نجمة تصنيف الفندق؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "الفندق مرخّص ومصنّف رسميًا من وزارة السياحة ضمن فئة نجمة واحدة. تصنيف النجوم يعتمد على المرافق مثل المطاعم والمسابح والصالات الرياضية، ونحن نركّز على ما يهم الضيف فعلًا: غرف نظيفة وواسعة، أجنحة عائلية بغرفتين، غرف مهيأة لذوي الإعاقة الحركية والسمعية، مواقف مجانية، وأسعار مناسبة شاملة الضريبة. / The hotel is officially licensed and classified by the Saudi Ministry of Tourism in the 1-star category. Star ratings reflect facilities such as restaurants, pools and gyms; we focus on what matters most to guests — clean, spacious rooms, two-bedroom family suites, rooms adapted for mobility and hearing needs, free parking, and great-value prices with tax included."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "أين يقع فندق الرؤية الذهبية؟",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -513,6 +533,7 @@ h1,h2,h3{line-height:1.35;font-weight:700}
       <h1 data-ar="فندق الرؤية الذهبية" data-en="Arrawiya Alzahabia Hotel">فندق الرؤية الذهبية</h1>
       <div class="alt-name" data-ar="ARRAWIYA ALZAHABIA HOTEL" data-en="فندق الرؤية الذهبية">ARRAWIYA ALZAHABIA HOTEL</div>
       <div class="former" data-ar="المعروف سابقًا باسم Golden Vision Hotel" data-en="formerly Golden Vision Hotel">المعروف سابقًا باسم Golden Vision Hotel</div>
+      <div class="stars" role="img" aria-label="فندق مصنّف نجمة واحدة من وزارة السياحة / 1-star hotel classified by the Saudi Ministry of Tourism"><span class="st" aria-hidden="true">★</span><span data-ar="فندق نجمة واحدة · مصنّف من وزارة السياحة" data-en="1-star hotel · Classified by the Ministry of Tourism">فندق نجمة واحدة · مصنّف من وزارة السياحة</span></div>
       <p class="tag" data-ar="إقامة مريحة بلمسة عربية أصيلة في حي الفردوس، الدمام — أسعار شاملة الضريبة"
          data-en="Comfortable stays with authentic Arabian character in Al-Firdaws, Dammam — all prices tax included">إقامة مريحة بلمسة عربية أصيلة في حي الفردوس، الدمام — أسعار شاملة الضريبة</p>
       <div class="cta-row">
@@ -630,6 +651,10 @@ h1,h2,h3{line-height:1.35;font-weight:700}
       <p data-ar="نعم، هو الفندق نفسه في الموقع نفسه بحي الفردوس بالدمام. الاسم العربي فندق الرؤية الذهبية لم يتغير، أما الاسم الإنجليزي فأصبح Arrawiya Alzahabia Hotel بدلًا من Golden Vision Hotel، وقد تجد الاسم السابق على لوحة المبنى أو في بعض منصات الحجز." data-en="Yes — it is the same hotel at the same address in Al-Firdaws, Dammam. The Arabic name فندق الرؤية الذهبية is unchanged; the English name is now Arrawiya Alzahabia Hotel instead of Golden Vision Hotel. You may still see the former name on the building sign or on some booking platforms.">نعم، هو الفندق نفسه في الموقع نفسه بحي الفردوس بالدمام. الاسم العربي فندق الرؤية الذهبية لم يتغير، أما الاسم الإنجليزي فأصبح Arrawiya Alzahabia Hotel بدلًا من Golden Vision Hotel، وقد تجد الاسم السابق على لوحة المبنى أو في بعض منصات الحجز.</p>
     </div>
     <div class="faq-item">
+      <h3 data-ar="كم نجمة تصنيف الفندق؟" data-en="What is the hotel's star rating?">كم نجمة تصنيف الفندق؟</h3>
+      <p data-ar="الفندق مرخّص ومصنّف رسميًا من وزارة السياحة ضمن فئة نجمة واحدة. تصنيف النجوم يعتمد على المرافق مثل المطاعم والمسابح والصالات الرياضية، ونحن نركّز على ما يهم الضيف فعلًا: غرف نظيفة وواسعة، أجنحة عائلية بغرفتين، غرف مهيأة لذوي الإعاقة الحركية والسمعية، مواقف مجانية، وأسعار مناسبة شاملة الضريبة." data-en="The hotel is officially licensed and classified by the Saudi Ministry of Tourism in the 1-star category. Star ratings reflect facilities such as restaurants, pools and gyms; we focus on what matters most to guests — clean, spacious rooms, two-bedroom family suites, rooms adapted for mobility and hearing needs, free parking, and great-value prices with tax included.">الفندق مرخّص ومصنّف رسميًا من وزارة السياحة ضمن فئة نجمة واحدة. تصنيف النجوم يعتمد على المرافق مثل المطاعم والمسابح والصالات الرياضية، ونحن نركّز على ما يهم الضيف فعلًا: غرف نظيفة وواسعة، أجنحة عائلية بغرفتين، غرف مهيأة لذوي الإعاقة الحركية والسمعية، مواقف مجانية، وأسعار مناسبة شاملة الضريبة.</p>
+    </div>
+    <div class="faq-item">
       <h3 data-ar="أين يقع فندق الرؤية الذهبية؟" data-en="Where is Arrawiya Alzahabia Hotel located?">أين يقع فندق الرؤية الذهبية؟</h3>
       <p data-ar="يقع فندق الرؤية الذهبية في حي الفردوس بمدينة الدمام، المنطقة الشرقية، المملكة العربية السعودية. يبعد حوالي ٣ دقائق بالسيارة عن قاعة الدارة للمعارض والمؤتمرات، و٦ دقائق عن العثيم مول، و١٢ دقيقة عن كورنيش الدمام." data-en="Arrawiya Alzahabia Hotel (formerly Golden Vision Hotel) is in the Al-Firdaws District of Dammam, Eastern Province, Saudi Arabia. It is about 3 minutes by car from ADDARAH Exhibition and Conference Hall, 6 minutes from Al Othaim Mall, and 12 minutes from the Dammam Corniche.">يقع فندق الرؤية الذهبية في حي الفردوس بمدينة الدمام، المنطقة الشرقية، المملكة العربية السعودية. يبعد حوالي ٣ دقائق بالسيارة عن قاعة الدارة للمعارض والمؤتمرات، و٦ دقائق عن العثيم مول، و١٢ دقيقة عن كورنيش الدمام.</p>
     </div>
@@ -677,6 +702,11 @@ h1,h2,h3{line-height:1.35;font-weight:700}
           src="https://maps.google.com/maps?q=Golden%20Vision%20Hotel%20Al%20Firdaws%20Dammam&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
       </div>
       <div class="c-card">
+        <div class="c-row">
+          <span class="c-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.6 1.3 6.5L12 17.2l-5.9 3.2 1.3-6.5L2.5 9.3l6.6-.8z"/></svg></span>
+          <div><b data-ar="التصنيف الرسمي" data-en="Official classification">التصنيف الرسمي</b>
+          <span data-ar="منشأة سياحية مرخّصة ومصنّفة من وزارة السياحة — فئة نجمة واحدة ★" data-en="Licensed and classified by the Saudi Ministry of Tourism — 1-star category ★">منشأة سياحية مرخّصة ومصنّفة من وزارة السياحة — فئة نجمة واحدة ★</span></div>
+        </div>
         <div class="c-row">
           <span class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
           <div><b data-ar="العنوان" data-en="Address">العنوان</b>
@@ -741,6 +771,7 @@ h1,h2,h3{line-height:1.35;font-weight:700}
       <a href="#contact" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
     </div>
     <div data-ar="حي الفردوس، الدمام، المملكة العربية السعودية" data-en="Al-Firdaws District, Dammam, Saudi Arabia">حي الفردوس، الدمام، المملكة العربية السعودية</div>
+    <div class="fstars" data-ar="★ فئة نجمة واحدة — مصنّف من وزارة السياحة" data-en="★ 1-star category — Classified by the Ministry of Tourism">★ فئة نجمة واحدة — مصنّف من وزارة السياحة</div>
     <div class="fine" data-ar="المعروف سابقًا باسم Golden Vision Hotel" data-en="formerly Golden Vision Hotel">المعروف سابقًا باسم Golden Vision Hotel</div>
     <div class="fine" data-ar="© فندق الرؤية الذهبية — جميع الحقوق محفوظة" data-en="© Arrawiya Alzahabia Hotel — all rights reserved">© فندق الرؤية الذهبية — جميع الحقوق محفوظة</div>
   </div>
@@ -770,7 +801,7 @@ h1,h2,h3{line-height:1.35;font-weight:700}
 </div>
 <script>
 const ROOMS=[
- {img:"room-king.jpg",price:135,was:220,ar:{n:"غرفة بسرير كينج",d:"سرير كينج فاخر مع مساحة واسعة، مثالية للأفراد والأزواج.",a:["سرير كينج","تكييف","واي فاي","تلفزيون","ركن قهوة"]},en:{n:"King bed room",d:"A spacious room with a plush king bed — ideal for couples and solo travellers.",a:["King bed","AC","Wi-Fi","TV","Coffee corner"]}},
+ {img:"room-king.jpg",price:135,was:220,ar:{n:"غرفة بسرير كينج",d:"سرير كينج مريح مع مساحة واسعة، مثالية للأفراد والأزواج.",a:["سرير كينج","تكييف","واي فاي","تلفزيون","ركن قهوة"]},en:{n:"King bed room",d:"A spacious room with a comfortable king bed — ideal for couples and solo travellers.",a:["King bed","AC","Wi-Fi","TV","Coffee corner"]}},
  {img:"room-twin.jpg",price:150,was:250,ar:{n:"غرفة بسريرين منفصلين",d:"سريران مفردان مع مساحة مريحة للأصدقاء أو الزملاء.",a:["سريران","تكييف","واي فاي","تلفزيون"]},en:{n:"Twin bed room",d:"Two single beds with generous space — great for friends or colleagues.",a:["Twin beds","AC","Wi-Fi","TV"]}},
  {img:"room-triple.jpg",price:170,was:270,ar:{n:"غرفة ثلاثية",d:"ثلاثة أسرّة في غرفة واحدة واسعة للعائلات الصغيرة والمجموعات.",a:["3 أسرّة","تكييف","واي فاي","تلفزيون"]},en:{n:"Triple room",d:"Three beds in one large room — made for small families and groups.",a:["3 beds","AC","Wi-Fi","TV"]}},
  {img:"room-king-living.jpg",price:185,was:300,feat:true,ar:{n:"غرفة كينج مع صالة",d:"سرير كينج مع صالة جلوس خاصة وطاولة طعام — راحة إضافية لإقامة أطول.",a:["سرير كينج","صالة جلوس","ثلاجة","واي فاي"]},en:{n:"King bed with living room",d:"A king bedroom plus a private lounge with sofas and a dining corner — extra comfort for longer stays.",a:["King bed","Living room","Mini-fridge","Wi-Fi"]}},
